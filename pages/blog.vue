@@ -1,9 +1,13 @@
 <template>
   <div>
-    blog page
-    <p>Welcome to the blog page!</p>
-    <p>Here you can find the latest articles and updates.</p>
-    <p>Stay tuned for more content!</p>
+    <header>
+      <h1 class="text-2xl font-bold">Welcome to Nuxt-Shad</h1>
+    </header>
+    <main>
+      main
+      <section></section>
+    </main>
+    <footer>footer</footer>
   </div>
 </template>
 

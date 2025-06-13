@@ -121,3 +121,9 @@
     @apply bg-background text-foreground;
   }
 }
+h1 {
+  @apply text-[26px] font-semibold;
+}
+p {
+  @apply m-0 text-neutral-400;
+}

@@ -3,7 +3,7 @@
     <header
       class="flex items-center gap-2 p-4 hover:scale-[101%] transition cursor-pointer"
     >
-      <p class="font-bold text-neutral-800 flex items-center gap-3">
+      <p class="font-bold text-black flex items-center gap-3">
         <Icon size="30" name="tdesign:logo-cnb-filled" class="text-blue-500"/>
         Nuxt finance app</p>
     </header>
@@ -25,7 +25,7 @@
 
 <script setup>
 const items = ref([
-  { name: "Home", path: "/", icon: "material-symbols:dashboard-outline " },
+  { name: "Home", path: "/", icon: "material-symbols:dashboard-outline" },
   {
     name: "About",
     path: "/about",
