@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     ],
   },
 
-  modules: ['shadcn-nuxt', '@nuxt/icon'],
+  modules: ['shadcn-nuxt', '@nuxt/icon', "nuxt-charts"],
   shadcn: {
     /**
      * Prefix for all the imported component
