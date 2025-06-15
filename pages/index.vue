@@ -60,4 +60,19 @@ const list = ref([
   { name: "Week", component: resolveComponent("TabsWeek") },
   { name: "Month", component: resolveComponent("TabsMonth") },
 ]);
+
+const RevenueData = [
+  { month: "January", desktop: 186, mobile: 80 },
+  { month: "February", desktop: 305, mobile: 200 },
+  { month: "March", desktop: 237, mobile: 120 },
+  { month: "April", desktop: 73, mobile: 190 },
+  { month: "May", desktop: 209, mobile: 130 },
+  { month: "June", desktop: 214, mobile: 140 },
+];
+const RevenueCategoriesMultple = {
+  desktop: { name: "Desktop", color: "#3b82f6" },
+  mobile: { name: "Mobile", color: "#22c55e" },
+};
+
+const yFormatter = (i) => `${RevenueData[i]?.month}`;
 </script>
