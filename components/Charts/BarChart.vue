@@ -1,15 +1,15 @@
 <script setup>
 const RevenueData = [
-  { month: 'January', desktop: 186, mobile: 80 },
-  { month: 'February', desktop: 305, mobile: 200 },
-  { month: 'March', desktop: 237, mobile: 120 },
-  { month: 'April', desktop: 73, mobile: 190 },
-  { month: 'May', desktop: 209, mobile: 130 },
-  { month: 'June', desktop: 214, mobile: 140 },
+  { month: 'January', profit: 186, loss: 80 },
+  { month: 'February', profit: 305, loss: 200 },
+  { month: 'March', profit: 237, loss: 120 },
+  { month: 'April', profit: 73, loss: 190 },
+  { month: 'May', profit: 209, loss: 130 },
+  { month: 'June', profit: 214, loss: 140 },
 ]
 const RevenueCategoriesMultple = {
-  desktop: { name: 'Desktop', color: '#3b82f6' },
-  mobile: { name: 'Mobile', color: '#22c55e' },
+  profit: { name: 'Profit', color: '#3b82f6' },
+  loss: { name: 'Loss', color: '#f44336' },
 }
 
 const yFormatter = (i) => `${RevenueData[i]?.month}`
@@ -20,7 +20,7 @@ const yFormatter = (i) => `${RevenueData[i]?.month}`
     :stacked="true"
     :height="300"
     :categories="RevenueCategoriesMultple"
-    :y-axis="['desktop', 'mobile']"
+    :y-axis="['profit', 'loss']"
     :group-padding="0"
     :bar-padding="0.2"
     :xNumTicks="6"

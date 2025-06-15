@@ -28,7 +28,10 @@
         </TabsContent>
       </Tabs>
       <section>
-        <div class="mt-4">
+        <div class="grid grid-cols-2 mt-4 gap-8">
+          <div class="h-64">
+            <ChartsBarChart/>
+          </div>
           <div class="h-64 bg-gray-200 rounded-lg"></div>
         </div>
       </section>
