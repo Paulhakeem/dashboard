@@ -14,8 +14,8 @@
             :to="item.path"
             class="flex items-center gap-2 p-2 rounded hover:bg-gray-100 transition"
           >
-            <Icon size="25" :name="item.icon" class="text-blue-400"/>
-            <span class="text-gray-700">{{ item.name }}</span>
+            <Icon size="25" :name="item.icon" class="text-gray-300"/>
+            <span class="text-gray-200">{{ item.name }}</span>
           </NuxtLink>
         </div>
       </div>

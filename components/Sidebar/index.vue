@@ -1,11 +1,11 @@
 <template>
-  <div class="relative">
+  <div class="relative bg-[#192030]">
     <div
       class="flex lg:hidden z-50 items-center justify-between p-4 w-full h-full"
     >
       <p class="font-bold">Nuxt Finance App</p>
       <Icon
-        class="z-50 cursor-pointer left-2 top-2"
+        class="z-50 cursor-pointer left-2 top-2 text-white"
         size="30"
         name="material-symbols:menu"
         @click="open = !open"

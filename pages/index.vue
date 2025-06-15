@@ -1,11 +1,13 @@
 <template>
-  <div class="grid gap-4">
+  <div class="grid gap-8">
     <header class="flex items-start justify-between">
       <div class="grow">
         <p>Hey Paul, welcome back!!</p>
         <h1>Dashboard</h1>
       </div>
-      <div class="w-[120px] h-8 bg-neutral-300"></div>
+      <div>
+        <Button class="bg-[#192030] cursor-pointer">Profile</Button>
+      </div>
     </header>
     <main>
       <Tabs default-value="today" class="w-[400px]">
@@ -30,14 +32,18 @@
       <section>
         <div class="grid grid-cols-2 mt-4 gap-8">
           <div class="h-64">
-            <ChartsBarChart/>
+            <ChartsDonutChart/>
           </div>
-          <div class="h-64 bg-gray-200 rounded-lg"></div>
+          <div class="h-64">
+            <div class="h-64">
+              <ChartsBarChart />
+            </div>
+          </div>
         </div>
       </section>
     </main>
     <footer>
-      <div class="grid grid-cols-3 md:grid-cols-3 gap-4 mt-4">
+      <div class="grid grid-cols-3 md:grid-cols-3 gap-4 mt-20">
         <div class="p-4 bg-white rounded-lg shadow">
           <h2 class="text-lg font-semibold">Card 1</h2>
           <p>Content for card 1.</p>
@@ -56,6 +62,7 @@
 </template>
 
 <script setup>
+import { ChartsBarChart } from "#components";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const list = ref([
