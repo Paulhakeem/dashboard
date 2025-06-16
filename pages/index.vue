@@ -12,17 +12,17 @@
     <main>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 mb-10">
           <div class="flex-wrap md:flex lg:flex gap-10">
-          <div class="p-4 bg-[#21242d] rounded-lg shadow w-64">
-            <h2 class="text-sm font-semibold text-gray-200">Total Revenue</h2>
+          <div class="p-4 bg-[#21242d] rounded-lg shadow w-64 h-24">
+            <h2 class="text-sm font-semibold text-gray-200">Total Income</h2>
             <h5 class="text-2xl text-gray-200 font-bold">$12,345</h5>
           </div>
-          <div class="p-4 bg-[#21242d] rounded-lg shadow w-64">
+          <div class="p-4 bg-[#21242d] rounded-lg shadow w-64 h-24">
             <h2 class="text-sm text-gray-200 font-semibold">New Users</h2>
             <h5 class="text-2xl font-bold text-gray-200">1,234</h5>
           </div>
         </div>
         <div>
-          hello
+        <ChartsLineChart/>
         </div>
         </div>
       <section>

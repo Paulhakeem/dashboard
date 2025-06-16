@@ -2,10 +2,10 @@
 const donutData = ref([35, 25, 20, 15, 5]); // Percentages
 
 const marketShareLabels = [
-  { name: "Product A", color: "#3b82f6" }, // Blue
-  { name: "Product B", color: "#22c55e" }, // Green
-  { name: "Product C", color: "#f59e0b" }, // Amber
-  { name: "Product D", color: "#a855f7" }, // Purple
+  { name: "Goal A", color: "#3b82f6" }, // Blue
+  { name: "Goal B", color: "#22c55e" }, // Green
+  { name: "Goal C", color: "#f59e0b" }, // Amber
+  { name: "Goal D", color: "#a855f7" }, // Purple
   { name: "Other", color: "#06b6d4" }, // Cyan
 ];
 </script>
@@ -19,8 +19,8 @@ const marketShareLabels = [
     :labels="marketShareLabels"
   >
     <div class="absolute text-center">
-      <div class="font-semibold">Income</div>
-      <div class="text-(--ui-text-muted)">2 seconds ago</div>
+      <div class="font-semibold text-gray-700">Income Goals</div>
+      <h2 class="font-bold text-4xl text-gray-700">58%</h2>
     </div>
   </DonutChart>
 </template>

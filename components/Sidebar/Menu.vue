@@ -3,18 +3,19 @@
     <header
       class="flex items-center gap-2 p-4 hover:scale-[101%] transition cursor-pointer"
     >
-      <p class="font-bold text-black flex items-center gap-3">
-        <Icon size="30" name="tdesign:logo-cnb-filled" class="text-blue-500"/>
-        Nuxt finance app</p>
+      <h5 class="font-bold text-gray-200 flex items-center gap-3">
+        <Icon size="30" name="tdesign:logo-cnb-filled" class="text-blue-500" />
+        Nuxt finance app
+      </h5>
     </header>
     <div class="px-4 grow">
       <div class="grid gap-2">
         <div v-for="(item, index) in items" :key="index">
           <NuxtLink
             :to="item.path"
-            class="flex items-center gap-2 p-2 rounded hover:bg-gray-100 transition"
+            class="flex items-center gap-2 p-2 rounded hover:bg-gray-600 transition"
           >
-            <Icon size="25" :name="item.icon" class="text-gray-300"/>
+            <Icon size="25" :name="item.icon" class="text-gray-300" />
             <span class="text-gray-200">{{ item.name }}</span>
           </NuxtLink>
         </div>
@@ -25,22 +26,23 @@
 
 <script setup>
 const items = ref([
-  { name: "Home", path: "/", icon: "material-symbols:dashboard-outline" },
+  { name: "Dashboard", path: "/", icon: "material-symbols:dashboard-outline" },
   {
-    name: "About",
-    path: "/about",
-    icon: "mdi:about",
+    name: "Budgeting",
+    path: "/budgeting",
+    icon: "healthicons:low-income-level",
   },
   {
-    name: "Services",
-    path: "/services",
-    icon: "grommet-icons:services",
+    name: "Income",
+    path: "/income",
+    icon: "bi:graph-up-arrow",
   },
-  { name: "Blog", path: "/blog", icon: "cib:micro-blog" },
+  { name: "Expenses", path: "/expenses", icon: "bi:graph-down-arrow" },
+  { name: "Investments", path: "/investments", icon: "uis:graph-bar" },
   {
-    name: "Portfolio",
-    path: "/Portfolio",
-    icon: "mdi:user",
+    name: "Debts",
+    path: "/debts",
+    icon: "covid:graph-death-rate-stable",
   },
 ]);
 </script>
