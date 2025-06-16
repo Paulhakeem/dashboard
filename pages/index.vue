@@ -10,27 +10,23 @@
       </div>
     </header>
     <main>
-      <Tabs default-value="today" class="w-[400px]">
-        <TabsList>
-          <TabsTrigger
-            v-for="(tab, index) in list"
-            :key="index"
-            :value="tab.name"
-            class="cursor-pointer"
-          >
-            {{ tab.name }}
-          </TabsTrigger>
-        </TabsList>
-        <TabsContent
-          v-for="(tab, index) in list"
-          :key="index"
-          :value="tab.name"
-        >
-          <component :is="tab.component" />
-        </TabsContent>
-      </Tabs>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 mb-10">
+          <div class="flex-wrap md:flex lg:flex gap-10">
+          <div class="p-4 bg-[#21242d] rounded-lg shadow w-64">
+            <h2 class="text-sm font-semibold text-gray-200">Total Revenue</h2>
+            <h5 class="text-2xl text-gray-200 font-bold">$12,345</h5>
+          </div>
+          <div class="p-4 bg-[#21242d] rounded-lg shadow w-64">
+            <h2 class="text-sm text-gray-200 font-semibold">New Users</h2>
+            <h5 class="text-2xl font-bold text-gray-200">1,234</h5>
+          </div>
+        </div>
+        <div>
+          hello
+        </div>
+        </div>
       <section>
-        <div class="grid grid-cols-2 mt-4 gap-8">
+        <div id="charts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[80px]">
           <div class="h-64">
             <ChartsDonutChart/>
           </div>
@@ -63,13 +59,7 @@
 
 <script setup>
 import { ChartsBarChart } from "#components";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-const list = ref([
-  { name: "Today", component: resolveComponent("TabsToday") },
-  { name: "Week", component: resolveComponent("TabsWeek") },
-  { name: "Month", component: resolveComponent("TabsMonth") },
-]);
 
 const RevenueData = [
   { month: "January", desktop: 186, mobile: 80 },
