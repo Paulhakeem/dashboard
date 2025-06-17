@@ -6,29 +6,32 @@
         <h1>Dashboard</h1>
       </div>
       <div>
-        <Button class="bg-[#192030] cursor-pointer">Profile</Button>
+        <Button class="bg-[#242632] cursor-pointer">Profile</Button>
       </div>
     </header>
     <main>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 mb-10">
-          <div class="flex-wrap md:flex lg:flex gap-10">
-          <div class="p-4 bg-[#21242d] rounded-lg shadow w-64 h-24">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 mb-10">
+        <div class="flex-wrap md:flex lg:flex gap-10">
+          <div class="p-4 bg-[#242632] rounded-lg shadow w-64 h-24">
             <h2 class="text-sm font-semibold text-gray-200">Total Income</h2>
             <h5 class="text-2xl text-gray-200 font-bold">$12,345</h5>
           </div>
-          <div class="p-4 bg-[#21242d] rounded-lg shadow w-64 h-24">
+          <div class="p-4 bg-[#242632] rounded-lg shadow w-64 h-24">
             <h2 class="text-sm text-gray-200 font-semibold">New Users</h2>
             <h5 class="text-2xl font-bold text-gray-200">1,234</h5>
           </div>
         </div>
         <div>
-        <ChartsLineChart/>
+          <ChartsLineChart />
         </div>
-        </div>
+      </div>
       <section>
-        <div id="charts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[80px]">
+        <div
+          id="charts"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[80px]"
+        >
           <div class="h-64">
-            <ChartsDonutChart/>
+            <ChartsDonutChart />
           </div>
           <div class="h-64">
             <div class="h-64">
@@ -39,7 +42,7 @@
       </section>
     </main>
     <footer>
-      <div class="grid grid-cols-3 md:grid-cols-3 gap-4 mt-20">
+      <div class="grid grid-cols-3 md:grid-cols-3 gap-4 pt-[150px]">
         <div class="p-4 bg-white rounded-lg shadow">
           <h2 class="text-lg font-semibold">Card 1</h2>
           <p>Content for card 1.</p>
@@ -48,10 +51,7 @@
           <h2 class="text-lg font-semibold">Card 2</h2>
           <p>Content for card 2.</p>
         </div>
-        <div class="p-4 bg-white rounded-lg shadow">
-          <h2 class="text-lg font-semibold">Card 3</h2>
-          <p>Content for card 3.</p>
-        </div>
+        <CardTotalCard />
       </div>
     </footer>
   </div>
@@ -59,7 +59,6 @@
 
 <script setup>
 import { ChartsBarChart } from "#components";
-
 
 const RevenueData = [
   { month: "January", desktop: 186, mobile: 80 },
