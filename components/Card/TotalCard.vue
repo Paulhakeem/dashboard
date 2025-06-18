@@ -25,7 +25,7 @@ const list = ref([
   },
   {
     title: 'Investments',
-    value: '$1,234',
+    value: '$1000,000',
     icon: 'solar:graph-up-bold',
   },
   { title: 'Debts',

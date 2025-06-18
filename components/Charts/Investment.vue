@@ -22,7 +22,7 @@ const xFormatter = (i: number): string | number => `${AreaChartData[i]?.month}`
 <template>
   <AreaChart
     :data="AreaChartData"
-    :height="150"
+    :height="120"
     y-label="Value"
     x-label="Month"
     :categories="categories"
