@@ -42,7 +42,7 @@ const list = ref([
 <template>
   <Card class="shadow-lg">
     <CardHeader>
-      <CardTitle class="bg-[#242632] flex justify-between items-center py-3 px-2 rounded-t-lg">
+      <CardTitle class="bg-[#3b82f6] flex justify-between items-center py-3 px-2 rounded-t-lg">
         <span class="text-gray-200 text-sm font-semibold ">Total Value</span>
         <span class=" text-sm font-semibold text-gray-200">Balance</span>
 

@@ -34,32 +34,29 @@
             <ChartsDonutChart />
           </div>
           <div class="h-64">
-            <div class="h-64">
-              <ChartsBarChart />
-            </div>
+            <ChartsBarChart />
           </div>
         </div>
       </section>
     </main>
     <footer>
-      <div class="grid grid-cols-3 md:grid-cols-3 gap-4 pt-[150px]">
+      <div class="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 pt-[120px]">
         <div class="p-4 bg-white rounded-lg shadow">
           <h2 class="text-lg font-semibold">Card 1</h2>
           <p>Content for card 1.</p>
         </div>
-        <div class="p-4 bg-white rounded-lg shadow">
-          <h2 class="text-lg font-semibold">Card 2</h2>
-          <p>Content for card 2.</p>
+        <div>
+          <CardInvestiment />
         </div>
-        <CardTotalCard />
+        <div>
+          <CardTotalCard />
+        </div>
       </div>
     </footer>
   </div>
 </template>
 
 <script setup>
-import { ChartsBarChart } from "#components";
-
 const RevenueData = [
   { month: "January", desktop: 186, mobile: 80 },
   { month: "February", desktop: 305, mobile: 200 },
