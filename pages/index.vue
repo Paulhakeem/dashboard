@@ -41,9 +41,8 @@
     </main>
     <footer>
       <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 pt-[120px]">
-        <div class="p-4 rounded-lg">
-          <h2 class="text-lg font-semibold">Card 1</h2>
-          <p>Content for card 1.</p>
+        <div class=" rounded-lg">
+          <CardBudget/>
         </div>
         <div class="space-y-4">
           <CardInvestiment />
