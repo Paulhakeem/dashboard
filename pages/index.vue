@@ -28,7 +28,7 @@
       <section>
         <div
           id="charts"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[80px]"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[120px]"
         >
           <div class="h-64">
             <ChartsDonutChart />
