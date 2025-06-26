@@ -11,73 +11,58 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const year = ref([
-  { month: "January", value: "january" },
-  { month: "February", value: "february" },
-  { month: "March", value: "march" },
-  { month: "April", value: "april" },
-  { month: "May", value: "may" },
-  { month: "June", value: "june" },
-  { month: "July", value: "july" },
-  { month: "August", value: "august" },
-  { month: "September", value: "september" },
-  { month: "October", value: "october" },
-  { month: "November", value: "november" },
-  { month: "December", value: "december" },
+  { month: "January", value: "january", path: "/jan" },
+  { month: "February", value: "february", path: "/feb" },
+  { month: "March", value: "march", path: "/mar" },
+  { month: "April", value: "april", path: "/apr" },
+  { month: "May", value: "may", path: "/may" },
+  { month: "June", value: "june", path: "/jun" },
+  { month: "July", value: "july", path: "/jul" },
+  { month: "August", value: "august", path: "/aug" },
+  { month: "September", value: "september", path: "/sep" },
+  { month: "October", value: "october", path: "/oct" },
+  { month: "November", value: "november", path: "/nov" },
+  { month: "December", value: "december", path: "/dec" },
 ]);
 </script>
 
 <template>
-  <Tabs default-value="account" class="w-full">
-    <TabsList class="grid w-full grid-cols-12">
-      <div v-for="(month, index) in year" :key="index">
-        <TabsTrigger value="account"> {{ month.month }} </TabsTrigger>
-      </div>
+  <Tabs class="w-full" default-value="january">
+    <TabsList class="grid grid-cols-12 w-full">
+      <TabsTrigger
+        v-for="(month, index) in year"
+        :key="index"
+        :value="month.value"
+        class="col-span-1 text-xs p-2 rounded hover:bg-blue-500 dark:hover:bg-gray-700"
+      >
+        {{ month.month }}
+      </TabsTrigger>
     </TabsList>
-    <TabsContent value="account">
-      <Card>
-        <CardHeader>
-          <CardTitle>Account</CardTitle>
-          <CardDescription>
-            Make changes to your account here. Click save when you're done.
-          </CardDescription>
-        </CardHeader>
-        <CardContent class="space-y-2">
-          <div class="space-y-1">
-            <Label for="name">Name</Label>
-            <Input id="name" type="text" placeholder="John Doe" />
-          </div>
-          <div class="space-y-1">
-            <Label for="email">Email</Label>
-            <Input id="email" type="email" placeholder="" />
-          </div>
-        </CardContent>
-        <CardFooter>
-          <Button>Save changes</Button>
-        </CardFooter>
-      </Card>
-    </TabsContent>
-    <TabsContent value="password">
-      <Card>
-        <CardHeader>
-          <CardTitle>Password</CardTitle>
-          <CardDescription>
-            Change your password here. After saving, you'll be logged out.
-          </CardDescription>
-        </CardHeader>
-        <CardContent class="space-y-2">
-          <div class="space-y-1">
-            <Label for="current">Current password</Label>
-            <Input id="current" type="password" />
-          </div>
-          <div class="space-y-1">
-            <Label for="new">New password</Label>
-            <Input id="new" type="password" />
-          </div>
-        </CardContent>
-        <CardFooter>
-          <Button>Save password</Button>
-        </CardFooter>
-      </Card>
-    </TabsContent>
+    <!-- content -->
+    <div v-for="(month, index) in year" :key="'content-' + index">
+      <TabsContent :value="month.value" class="col-span-12 p-4">
+          <Card class="w-full">
+            <CardHeader>
+              <CardTitle>{{ month.month }} Report</CardTitle>
+              <CardDescription>
+                Manage your records for {{ month.month }}.
+              </CardDescription>
+            </CardHeader>
+            <CardContent class="space-y-2">
+              <div class="space-y-1">
+                <Label for="name">Name</Label>
+                <Input id="name" type="text" placeholder="John Doe" />
+              </div>
+              <div class="space-y-1">
+                <Label for="email">Email</Label>
+                <Input id="email" type="email" placeholder="you@example.com" />
+              </div>
+            </CardContent>
+            <CardFooter>
+              <Button>Save changes</Button>
+            </CardFooter>
+          </Card>
+      </TabsContent>
+    </div>
   </Tabs>
 </template>
