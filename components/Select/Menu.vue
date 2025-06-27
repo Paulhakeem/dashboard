@@ -1,5 +1,13 @@
 <script setup>
-import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import {
   Card,
   CardContent,
@@ -60,41 +68,37 @@ const year = shallowRef([
     component: resolveComponent("BudgentDecember"),
   },
 ]);
+const selectedMonth = ref("january");
 </script>
 
 <template>
   <main>
-    <Tabs class="hidden lg:flex w-full" default-value="january">
-      <TabsList class="grid grid-cols-12 w-full">
-        <TabsTrigger
-          v-for="(month, index) in year"
-          :key="index"
-          :value="month.value"
-          class="col-span-1 text-xs p-2 rounded hover:bg-blue-500 dark:hover:bg-gray-700"
-        >
-          {{ month.month }}
-        </TabsTrigger>
-      </TabsList>
-      <!-- content -->
-      <div v-for="(month, index) in year" :key="'content-' + index">
-        <TabsContent :value="month.value" class="col-span-12 p-4">
-          <Card class="w-full">
-            <CardHeader>
-              <CardTitle>{{ month.month }} Report</CardTitle>
-              <CardDescription>
-                This is where you can manage your budget for {{ month.month }}.
-              </CardDescription>
-            </CardHeader>
+    <Select v-model="selectedMonth">
+      <SelectTrigger class="w-[130px]">
+        <SelectValue />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectGroup>
+          <SelectLabel>Months</SelectLabel>
+          <SelectItem v-for="m in year" :key="m.value" :value="m.value">
+            {{ m.month }}
+          </SelectItem>
+        </SelectGroup>
+      </SelectContent>
+    </Select>
+
+    <!--  -->
+    <Tabs v-model="selectedMonth" class=" w-screen max-w-none overflow-x-hidden mt-6">
+      <div v-for="m in year" :key="m.value" class="w-full">
+        <TabsContent :value="m.value">
+          <Card>
             <CardContent class="space-y-2">
-              <component :is="month.component" />
+              <component :is="m.component" />
             </CardContent>
           </Card>
         </TabsContent>
       </div>
     </Tabs>
 
-    <div class="flex lg:hidden">
-       <SelectMenu/>
-    </div>
   </main>
 </template>
