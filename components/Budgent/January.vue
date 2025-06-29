@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+
+</script>
+
 <template>
-  <div class="w-full">january</div>
+<h1>Hello january</h1>
 </template>
