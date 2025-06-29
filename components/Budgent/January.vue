@@ -1,7 +1,5 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
-<h1>Hello january</h1>
+  <h1>Hello january</h1>
 </template>
